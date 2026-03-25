@@ -1,7 +1,6 @@
 import 'webext-dynamic-content-scripts';
 import 'webext-bugs/options-menu-item';
 import {customizeNoAllUrlsErrorMessage} from 'webext-bugs/no-all-urls';
-import {isSafari} from 'webext-detect';
 import {handleMessages} from 'webext-msg';
 import addPermissionToggle from 'webext-permission-toggle';
 import {StorageItem} from 'webext-storage';
@@ -19,9 +18,7 @@ const {version, permissions} = chrome.runtime.getManifest();
 const welcomeShown = new StorageItem('welcomed', {defaultValue: false});
 
 // GHE support
-if (!isSafari()) {
-	addPermissionToggle();
-}
+addPermissionToggle();
 
 // Add "Reload without content scripts" functionality
 addReloadWithoutContentScripts();

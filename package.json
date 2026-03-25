@@ -61,7 +61,7 @@
 		"webext-bugs": "^2.0.1",
 		"webext-content-scripts": "^2.7.3",
 		"webext-detect": "^5.3.1",
-		"webext-dynamic-content-scripts": "^10.0.4",
+		"webext-dynamic-content-scripts": "file:../webext-dynamic-content-scripts",
 		"webext-msg": "^1.0.0",
 		"webext-options-sync": "^4.3.0",
 		"webext-options-sync-per-domain": "^4.3.1",
